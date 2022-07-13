@@ -1,0 +1,10 @@
+<h2>Your Posts</h2>
+ 
+<ul>
+  {{#each posts}}
+    <li>
+        {{ this.title }} by {{ this.userId.username }}
+        <a href="/post/{{ this._id }}">Read more</a>
+    </li>
+  {{/each}}
+</ul>
