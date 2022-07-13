@@ -1,0 +1,17 @@
+<h2>Edit this post: {{ post.title }}</h2>
+
+<form action="/post/{{ post._id }}/edit" method="POST">
+<label>Title:
+    <input type="text" name="title" value="{{ post.title }}" />
+</label>
+
+<label>Content:
+<input type="text" name="content" value="{{ post.content }}" />
+</label>
+
+<label> Image:
+<input type="file" name="post-header-image">
+ </label>
+
+<button>Save Changes</button>
+</form>

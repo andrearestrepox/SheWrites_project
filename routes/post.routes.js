@@ -52,5 +52,35 @@ router.post('/post/create', fileUploader.single('post-header-image'), (req, res)
     })
   })
 
+  router.get('/post/:postId/edit', (req, res, next) => {
+    const { postId } = req.params;
+   
+    Post.findById(postId)
+      .then(postToEdit => {
+        res.render('post-edit.hbs', { post: postToEdit});
+        console.log(postToEdit);
+      })
+      .catch(error => next(error));
+  });
+
+  router.post('/post/:postId/edit' , (req,res,next) => {
+    const { postId } = req.params;
+    const { title, content } = req.body;
+
+    Post.findByIdAndUpdate(postId, {title, content}, { new: true})
+    .then(updatedPost => {
+        console.log(updatedPost)
+        res.redirect(`/myPosts`)
+    })
+    .catch(error => next(error));
+});
+
+router.post('/post/:postId/delete', (req, res, next) => {
+    const postId = req.params.postId;
+
+    Post.findByIdAndDelete(postId)
+    .then(() => res.redirect('/myposts'))
+    .catch(error => next(error));
+})
 
 module.exports = router;

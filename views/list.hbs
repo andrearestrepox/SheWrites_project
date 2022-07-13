@@ -2,9 +2,16 @@
  
 <ul>
   {{#each posts}}
+  <div>
     <li>
-        {{ this.title }} by {{ this.userId.username }}
+       <h1>{{ this.title }}</h1>  by {{ this.userId.username }}
         <a href="/post/{{ this._id }}">Read more</a>
+         <a href="/post/{{ this._id }}/edit">Edit</a>
     </li>
+
+    <form action="/post/{{ this._id }}/delete" method="POST">
+    <button>Delete</button>
+    </form>
+   </div>
   {{/each}}
 </ul>
