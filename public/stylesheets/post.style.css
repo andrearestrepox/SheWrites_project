@@ -1,0 +1,14 @@
+body{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+form{
+    padding-top: 50px;
+display:flex;
+justify-content: center;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}

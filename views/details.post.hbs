@@ -1,4 +1,8 @@
+<link rel="stylesheet" href="/stylesheets/details.style.css" />
 
+<body>
+  
+</body>
 <img src="{{imageUrl}}" height="100px"alt="">
 <h2>{{title}}</h2>
 <div>
@@ -19,17 +23,18 @@
  
 <h3>Add comment</h3>
  
-<form action="/posts/{{_id}}/comment" method="POST">
-  <label> Your username:
+<form action="/posts/{{this._id}}/comment" method="POST">
+ <label> Your username:
     <input type="text" name="author" />
   </label>
- 
-  <input type="text" name="postAuthor" value="{{author.username}}" hidden />
-  <textarea name="content" cols="30" rows="2"></textarea>
+  
+  <input type="text" name="postAuthor" value="{{post.username}}" hidden />
+  <textarea name="content" cols="30" rows="2">content</textarea>
  
   <button type="submit">Comment</button>
 </form>
  
 <br>
-<a href="/users/{{author._id}}/posts">See all {{author.username}}'s posts </a>
+<a href="/users/{{this._id}}/posts">See all {{post.username}}'s posts </a>
 
+</body>

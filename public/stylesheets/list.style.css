@@ -1,0 +1,21 @@
+body{
+    font-family: 'Cormorant Garamond', serif;
+}
+h2{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+}
+/* ul{
+   display: flex;
+    justify-content: center;   
+    flex-direction:column;
+    list-style-type: none;
+}
+/* button{
+    display:flex;
+    justify-content: center;   
+    flex-direction: row;
+
+} */
+

@@ -1,11 +1,17 @@
+<link rel="stylesheet" href="/stylesheets/user-profile.style.css" />
+
+<body>
+    
+
 <h1> This is your profile page</h1>
 
 {{#if user}}
 <h2>Welcome, {{user.username}}!</h2>
-<p> This is your profile page</p>
-<button>
+
+{{!-- <button>
     <a href="/userProfile"> Reload the page</a>
-</button>
+</button> --}}
 {{else}}
 <p>Sorry, there is no user logged in.</p>
 {{/if}}
+</body>

@@ -6,35 +6,51 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>{{appTitle}}</title>
-      <link rel="stylesheet" href="/stylesheets/style.css" />
+      <link rel="stylesheet" href="/stylesheets/layout.style.css" />
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+      </style>
    </head>
 
    <body>
 
-      <nav>
-         <ul>
-            <li id="to-left">
-               <h1><a href="/"> She Writes </a></h1>
+<div class="div-1"></div>
+      <nav id="nav-bar">
+         {{!-- <hr class="hr-2"> --}}
+         <div class="logo-img">
+           <a href="/"><img src="/images/SheWrites (2).png" alt="logo"></a>
+          
+         </div>
+        
+         <ul class="nav-list">
+            <li class="list-item">
+               <a href="/login">Log In</a>
             </li>
-            <li id="to-right">
-               <p><a href="/login">Log In</a></p>
-            </li>
-               <li>
-                  <p><a href="/signup">Sign Up</a></p>
+               
+               <li class="list-item">
+                  <a href="/post/create">Write</a>
+               </li>
+               <li class="list-item">
+                  <a href="/myposts">My Posts</a>
+               </li>
+               <li class="list-item">
+                 <button class="button-1"><a href="/signup">Sign Up</a></button>
 
                </li>
-               <li>
-                  <p><a href="/post/create">Write</a></p>
-               </li>
-               
-               <li>
-                  <p><a href="/myposts">My Posts</a></p>
-               </li>
-               {{!-- <li>
-                  <p><a href="/read">Read</a></p>
-               </li> --}}
          </ul>
-      </nav>
+         {{!-- <hr> --}}
+           
+        </nav>
+ <hr class="hr-1">
+     
+
+     
+      <div class="div-1"></div>
+
+
+
+  
+ 
 
       {{{body}}}
 

@@ -52,6 +52,23 @@ router.post('/post/create', fileUploader.single('post-header-image'), (req, res)
     })
   })
 
+  // router.get('/post/:postId', (req, res, next) => {
+  //   Post.findById(postId)
+  //   .populate('author comments')
+  //   .populate({
+  //       path: 'comments',
+  //       populate: {
+  //           path: 'author',
+  //           model: 'User'
+  //       }
+  //   })
+  //   .then(foundPost => res.render('details.post.hbs', foundPost))
+  //   .catch(err => {
+  //       console.log(`Err while getting a single post from the DB: ${err}`);
+  //       next(err);
+  //   });
+  // });
+
   router.get('/post/:postId/edit', (req, res, next) => {
     const { postId } = req.params;
    

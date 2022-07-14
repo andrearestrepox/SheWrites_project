@@ -1,6 +1,10 @@
+<link rel="stylesheet" href="/stylesheets/login.style.css" />
+<body>
+    
+</body>
 <div id="form">
     <h2>Log In</h2>
-    <form action="/login" method="POST">
+    <form class="login-form" action="/login" method="POST">
    
     <label> Username
         <input type="text" name="username" placeholder="password" />
@@ -9,10 +13,11 @@
     <label> Password
         <input type="password" name="password" placeholder="********" />
     </label>
-    <button type="submit"> Log In </button>
+    <button class="button-btn" type="submit"> Log In </button>
 
     </form>
     {{#if errorMessage}}
     <p>{{errorMessage}}</p>
     {{/if}}
 </div>
+</body>
